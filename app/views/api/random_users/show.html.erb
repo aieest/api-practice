@@ -1,1 +1,97 @@
 <%= @random_user %>
+<content class="resume d-flex flex-column">
+
+  <section class="resume-top-container d-flex flex-row">
+    <%= image_tag @random_user['results'][0]['picture']['large'], alt: "ID Picture" %>
+
+    <div class="resume-top-texts">
+
+      <h1 class="resume-applicant-name">
+        <%= @random_user['results'][0]['name']['first'] %>
+        <%= @random_user['results'][0]['name']['last'] %>
+      </h1>
+      <p class="job-title">
+        Food Scientist
+      </p>
+
+    </div>
+  </section>
+
+  <section class="resume-middle-text d-flex flex-row">
+
+    <div class="resume-contact-info">
+      <p class="phone-number"><%= @random_user['results'][0]['cell'] %></p>
+      <p class="email"><%= @random_user['results'][0]['email'] %></p>
+      <p class="address">
+        <%=
+          "#{@random_user['results'][0]['location']['street']['number']} #{@random_user['results'][0]['location']['street']['name']},
+            #{@random_user['results'][0]['location']['city']}, #{@random_user['results'][0]['location']['state']},
+            #{@random_user['results'][0]['location']['country']} #{@random_user['results'][0]['location']['postcode']}"
+        %>
+      </p>
+    </div>
+
+    <div class="job-exp">
+      <div class="job-exp-card">
+        <h1 class="company-name">
+          ACME Foods
+        </h1>
+
+        <p class="job-date">
+          <span class="start-date">January 2019</span> - <span class="end-date">March 2021</span>
+        </p>
+
+        <p class="job-description">
+          As a Food Scientist at ACME Foods, I conducted research and developed new food products. My responsibilities included ingredient analysis, recipe formulation, and quality control. I also collaborated with the marketing team to create product packaging and marketing materials.
+        </p>
+      </div>
+
+      <div class="job-exp">
+        <div class="job-exp-card">
+          <h1 class="company-name">
+            FreshEats Co.
+          </h1>
+
+          <p class="job-date">
+            <span class="start-date">June 2021</span> - <span class="end-date">Present</span>
+          </p>
+
+          <p class="job-description">
+            At FreshEats Co., I continued my work as a Food Scientist, focusing on sustainable food production. I introduced innovative techniques to reduce waste and improve food quality. I led a team of researchers and worked closely with the production department to implement process improvements.
+          </p>
+        </div>
+
+        <div class="job-exp-card">
+          <h1 class="company-name">
+            ACME Foods
+          </h1>
+
+          <p class="job-date">
+            <span class="start-date">January 2019</span> - <span class="end-date">March 2021</span>
+          </p>
+
+          <p class="job-description">
+            As a Food Scientist at ACME Foods, I conducted research and developed new food products. My responsibilities included ingredient analysis, recipe formulation, and quality control. I also collaborated with the marketing team to create product packaging and marketing materials.
+          </p>
+        </div>
+
+        <div class="job-exp-card">
+          <h1 class="company-name">
+            FoodTech Innovators
+          </h1>
+
+          <p class="job-date">
+            <span class="start-date">May 2017</span> - <span class="end-date">December 2018</span>
+          </p>
+
+          <p class="job-description">
+          During my time at FoodTech Innovators, I played a key role in developing cutting-edge food processing technologies. I conducted extensive research, collaborated with cross-functional teams, and implemented automation processes that significantly increased production efficiency. This experience honed my skills in food science and technology.
+          </p>
+        </div>
+      </div>
+
+
+
+  </section>
+
+</content>
