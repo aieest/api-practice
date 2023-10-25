@@ -67,5 +67,10 @@ group :development do
   # gem "spring"
 end
 
+
+#REST CLIENT API
 gem 'rest-client'
+
+#STIMULUS JS
+gem 'stimulus-rails'
 
